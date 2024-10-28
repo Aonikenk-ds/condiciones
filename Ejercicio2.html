@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+    
+    <style>
+        img{
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+      <div>   
+      <img  src="./assets/img/sticker1.jpg" alt="sticker1">
+       <input id="wsp" type="text"> 
+      </div>
+      <div>
+      <img src="./assets/img/sticker2.png" alt="sticker2">
+      <input id="panda" type="text">
+      </div>
+      <div>
+      <img src="./assets/img/sticker3.jpg" alt="sticker3">
+      <input id="stich" type="text">
+      </div>
+    </div>
+
+    <p id="sumastickers"></p>
+    <button onclick="
+    wsp = Number(document.querySelector('#wsp').value);
+    panda = Number(document.querySelector('#panda').value);
+    stich = Number(document.querySelector('#stich').value);
+
+    stickers = wsp + panda + stich;
+
+    stickerstotal = document.querySelector('#sumastickers');
+
+    if(stickers <=10){
+        stickerstotal.innerText = 'Estás llevando ' + stickers  + ' stickers';
+    } else {
+        stickerstotal.innerText = 'Estás llevando demasiados stickers';
+    }
+
+    ">Verificar</button>
+
+
+
+    <script src="./assets/js/java.js"></script>
+    
+</body>
+</html>
